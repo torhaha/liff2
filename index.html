@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
-  <title>AUTOSLOT</title>
+  <title>My LIFF app</title>
   <link rel="stylesheet" href="css/style.css" media="all">
 </head>
 <body>
@@ -36,21 +36,19 @@
   <button id="btnLogOut" onclick="logOut()">Log Out</button>
   <button id="btnClose" onclick="closed()">Close</button>
 
- <script src="js/vconsole.min.js"></script>
- <script>
+  <!-- <script src="js/vconsole.min.js"></script> -->
+  <!-- <script>
     var vConsole = new VConsole()
     console.log("Hello World!")
-  </script>
+  </script> -->
 
-  <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+  <!-- <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script> -->
   <script>
     function createUniversalLink() {
     }
 
     async function shareMsg() {
-        await liff.shareTargetPicker{
-            
-        }
+    }
 
     function logOut() {
     }
@@ -68,43 +66,24 @@
     }
 
     async function sendMsg() {
-      if (liff.getContext ().type !== "none"){
     }
 
     function getContext() {
     }
 
     async function getUserProfile() {
-      const Profile = await liff.getProfile()
-      document.getElementById("pictureUrl").src = profile.pictureUrl
-      document.getElementById("userId").append(profile.userId)
-      document.getElementById("statusMessage").append(profile.statusMessage)
-      document.getElementById("displayName").append(profile.displayName)
-      document.getElementById("decodedIDToken").append(liff.isInClient().email)
     }
 
     function getEnvironment() {
-        document.getElementById("os").append(liff.getOS())
-        document.getElementById("language").append(liff.getLanguage())
-        document.getElementById("version").append(liff.getVersion())
-        document.getElementById("accessToken").append(liff.getAccessToken())
-        document.getElementById("isInClient").append(liff.isInClient())
-        if (liff.isInClient()) {
-         document.getElementById("btnLogOut").style.display = "none"   
-        }
-        else {
-         document.getElementById("btnMsg").style.display = "none"
-         document.getElementById("btnScanCode").style.display = "none"
-         document.getElementById("btnClose").style.display = "none"
-     }
     }
 
     async function main() {
-      await liff.init({ liffId: "1656271428-39WjOYoY" })
-      getEnvironment()
-      getUserProfile()
-      getContext()
-      //getFriendship()
+      alert("LINE Developers x Skooldio")
+      await liff.init({ liffId: "YOUR-LIFF-ID" })
+      // getEnvironment()
+      // getUserProfile()
+      // getContext()
+      // getFriendship()
       // createUniversalLink()
     }
     main()
