@@ -7,27 +7,7 @@
   <link rel="stylesheet" href="css/style.css" media="all">
 </head>
 <body>
-  <p id="os"><b>OS:</b> </p>
-  <p id="language"><b>Language:</b> </p>
-  <p id="version"><b>Version:</b> </p>
-  <p id="isInClient"><b>isInClient:</b> </p>
-  <p id="accessToken"><b>AccessToken:</b> </p>
-  <img id="pictureUrl">
-  <p id="userId"><b>userId:</b> </p>
-  <p id="displayName"><b>displayName:</b> </p>
-  <p id="statusMessage"><b>statusMessage:</b> </p>
-  <p id="decodedIDToken"><b>email:</b> </p>
-  <p id="type"><b>type:</b> </p>
-  <p id="viewType"><b>viewType:</b> </p>
-  <p id="utouId"><b>utouId:</b> </p>
-  <p id="roomId"><b>roomId:</b> </p>
-  <p id="groupId"><b>groupId:</b> </p>
-  <p id="friendship"><b>isFriendship:</b> </p>
-  <p id="scanCode"><b>Code:</b> </p>
-  <p id="isLoggedIn"><b>isLoggedIn:</b> </p>
-  <p id="universalLink1"><b>Universal Link:</b> </p>
-  <p id="universalLink2"><b>Universal Link with Query params:</b> </p>
-  <p><a href="liff/path/?param=9">Link to Path</a></p>
+ 
 
   <button id="btnMsg" onclick="sendMsg()">Send Message</button>
   <button id="btnShare" onclick="shareMsg()">Share Target Picker</button>
@@ -48,6 +28,185 @@
     }
 
     async function shareMsg() {
+        await liff.shareTargetPicker([
+            {
+  "line": {
+    "contents": {
+      "type": "bubble",
+      "footer": {
+        "offsetStart": "none",
+        "paddingTop": "md",
+        "contents": [
+          {
+            "action": {
+              "uri": "https://www.slotautogame.com",
+              "label": "สมัครสมาชิก",
+              "type": "uri",
+              "altUri": {
+                "desktop": "https://www.slotautogame.com"
+              }
+            },
+            "height": "sm",
+            "type": "button",
+            "gravity": "bottom",
+            "style": "link",
+            "color": "#FFFACD",
+            "margin": "none"
+          },
+          {
+            "height": "sm",
+            "action": {
+              "type": "uri",
+              "label": "ขอรับเครดิตฟรี",
+              "uri": "https://lin.ee/Kin24vS"
+            },
+            "style": "link",
+            "type": "button",
+            "color": "#FFFACD"
+          }
+        ],
+        "layout": "horizontal",
+        "cornerRadius": "none",
+        "offsetBottom": "none",
+        "paddingAll": "md",
+        "backgroundColor": "#330000",
+        "spacing": "xl",
+        "borderWidth": "none",
+        "type": "box",
+        "offsetTop": "none"
+      },
+      "body": {
+        "layout": "vertical",
+        "backgroundColor": "#000000",
+        "contents": [
+          {
+            "color": "#FF0033",
+            "style": "normal",
+            "decoration": "none",
+            "weight": "bold",
+            "position": "relative",
+            "type": "text",
+            "align": "center",
+            "size": "xl",
+            "text": "โปรสุดคุ้ม เหมือนได้ฟรี"
+          },
+          {
+            "layout": "baseline",
+            "margin": "xs",
+            "contents": [
+              {
+                "size": "sm",
+                "type": "icon",
+                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+              },
+              {
+                "type": "icon",
+                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                "size": "sm"
+              },
+              {
+                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                "type": "icon",
+                "size": "sm"
+              },
+              {
+                "type": "icon",
+                "size": "sm",
+                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+              },
+              {
+                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gray_star_28.png",
+                "size": "sm",
+                "type": "icon"
+              },
+              {
+                "type": "text",
+                "size": "sm",
+                "text": "4.0",
+                "color": "#999999",
+                "style": "normal",
+                "margin": "md"
+              }
+            ],
+            "type": "box",
+            "action": {
+              "uri": "https://www.slotautogame.com",
+              "type": "uri",
+              "label": "action"
+            }
+          },
+          {
+            "margin": "xxl",
+            "spacing": "sm",
+            "layout": "vertical",
+            "type": "box",
+            "contents": [
+              {
+                "layout": "baseline",
+                "type": "box",
+                "contents": [
+                  {
+                    "text": "สุดคุ้ม",
+                    "type": "text",
+                    "color": "#FFFFCC",
+                    "size": "md"
+                  },
+                  {
+                    "size": "sm",
+                    "type": "text",
+                    "text": "สุดพิเศษ ฝากวันนี้ 15 บาท รับเลยทันที 150 บาท ทำยอดเพียง 1 เทิร์น ถอนไปเลย",
+                    "color": "#FFFFFF"
+                  }
+                ],
+                "spacing": "sm"
+              },
+              {
+                "layout": "baseline",
+                "type": "box",
+                "spacing": "sm",
+                "contents": [
+                  {
+                    "color": "#FFFFFF",
+                    "type": "text",
+                    "size": "sm",
+                    "text": "1 สิทธิ์"
+                  },
+                  {
+                    "size": "sm",
+                    "type": "text",
+                    "color": "#FFFFFF",
+                    "text": "ต่อ 1 ท่าน"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "type": "box"
+      },
+      "hero": {
+        "url": "https://www.img.in.th/images/eb0615ad54ce49641edfdaa09dbee764.jpg",
+        "type": "image",
+        "align": "center",
+        "size": "full",
+        "backgroundColor": "#000000",
+        "position": "relative",
+        "aspectRatio": "1:1",
+        "margin": "xxl",
+        "aspectMode": "cover",
+        "action": {
+          "type": "uri",
+          "uri": "https://www.slotautogame.com",
+          "altUri": {
+            "desktop": "https://www.slotautogame.com"
+          }
+        }
+      }
+    },
+    "altText": "Flex Message",
+    "type": "flex"
+            }
+        ])
     }
 
     function logOut() {
@@ -60,10 +219,6 @@
     }
 
     function openWindow() {
-        liff.openWindow({
-            url: "https://www.slotautogame.com/"
-            external: true
-        })
     }
 
     async function getFriendship() {
