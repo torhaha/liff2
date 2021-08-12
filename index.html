@@ -60,12 +60,17 @@
     }
 
     function openWindow() {
+        liff.openWindow({
+            url: "https://www.slotautogame.com/"
+            external: true
+        })
     }
 
     async function getFriendship() {
     }
 
     async function sendMsg() {
+      if (liff.getContext ().type !== "none"){
     }
 
     function getContext() {
@@ -100,9 +105,8 @@
       await liff.init({ liffId: "1656271428-39WjOYoY" })
       getEnvironment()
       getUserProfile()
-
-      /getContext()
-      // getFriendship()
+      getContext()
+      //getFriendship()
       // createUniversalLink()
     }
     main()
